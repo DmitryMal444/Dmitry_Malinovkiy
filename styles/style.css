@@ -1,0 +1,54 @@
+.logo {
+    display: block;
+    max-width: 30%;
+}
+.photo {
+    max-width: 100%;
+}
+aside {
+    max-width: 300px;
+}
+header, aside, section, article, footer {
+    border: 3px solid darkred;
+    margin: 10px;
+    background-image: url(../images/subbackground.jpg);
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 3fr;
+}
+.main__header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 5fr;
+}
+footer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 5fr;
+}
+.about {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+main, body {
+    background-image: url(../images/background.jpg);
+}
+p {
+    font-size: 20px;
+}
