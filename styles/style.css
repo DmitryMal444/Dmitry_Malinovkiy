@@ -1,3 +1,33 @@
+/* Общая стилизация */
+body {
+    background-image: url(../images/background.jpg);
+    background-repeat: repeat-y;
+    background-size: 100%;
+    color: white;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+header, aside, section, article, footer {
+    border: 3px solid darkred;
+    margin: 10px;
+    background-image: url(../images/subbackground.jpg);
+}
+p {
+    font-size: 20px;
+    margin: 0;
+}
+/* Конец общая стилизация */
+.nav_link {
+    text-decoration: none;
+}
+.nav_link:link {
+    color: white;
+}
+.nav_link:visited {
+    color: white;
+}
+.nav_link:hover {
+    color: darkred;
+}
 .logo {
     display: block;
     max-width: 30%;
@@ -5,37 +35,30 @@
 .photo {
     max-width: 100%;
 }
-aside {
+.main_aside {
     max-width: 300px;
 }
-header, aside, section, article, footer {
-    border: 3px solid darkred;
-    margin: 10px;
-    background-image: url(../images/subbackground.jpg);
-}
-body {
+.main_body {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 4fr 1fr;
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
-    color: white;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
-main {
+.main_main {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 3fr;
 }
-.main__header {
+.main_main_header {
     grid-column-start: 1;
     grid-column-end: 3;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 5fr;
 }
-footer {
+.main_footer {
     grid-column-start: 1;
     grid-column-end: 3;
     display: grid;
@@ -46,9 +69,69 @@ footer {
     grid-column-start: 1;
     grid-column-end: 3;
 }
-main, body {
-    background-image: url(../images/background.jpg);
+/* Стили для таблицы менделеева */
+.table_link {
+    display: grid;
+    text-decoration: none;
+    border: 2px solid darkred;
+    grid: repeat(3, 1fr) / repeat(2, 1fr);
 }
-p {
-    font-size: 20px;
+.table_link:link {
+    color: white;
+}
+.table_link:visited {
+    color: white;
+}
+.table_link:hover {
+    background-color: silver;
+    transform: scale(1.1);
+    transition: all 0.4s linear;
+}
+.main_table {
+    max-width: 100%;
+    display: grid;
+    grid: repeat(4, 1fr) / repeat(4, 1fr);
+    grid-gap: 1%;
+    grid-area: 1 / 2 / 2 / 3;
+}
+.pink {
+    background-color: plum;
+}
+.yell {
+    background-color: khaki;
+}
+.blue {
+    background-color: cornflowerblue;
+}
+.tb_el {
+    font-size: 4em;
+    margin: 0;
+    grid-area: 1 / 1 / 3 / 2;
+}
+.tb_mass {
+    text-align: right;
+}
+.tb_name {
+    grid-area: 3 / 1 / 4 / 3;
+    font-size: 2em;
+}
+.tb_num {
+    text-align: right;
+}
+.null {
+    background-color: black;
+}
+.blue .tb_el {
+    grid-area: 1 / 2 / 3 / 3;
+    text-align: right;
+}
+.blue .tb_name {
+    text-align: right;
+}
+.blue .tb_num, .blue .tb_mass {
+    text-align: left;
+}
+.table_body {
+    display: grid;
+    grid: 1fr / 1fr 2fr 1fr;
 }
