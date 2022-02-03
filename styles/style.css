@@ -6,9 +6,8 @@ body {
     color: white;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
-header, aside, section, article, footer {
+header, footer {
     border: 3px solid darkred;
-    margin: 10px;
     background-image: url(../images/subbackground.jpg);
 }
 p {
@@ -18,6 +17,9 @@ p {
 /* Конец общая стилизация */
 .nav_link {
     text-decoration: none;
+}
+li {
+    list-style-type: none;
 }
 .nav_link:link {
     color: white;
@@ -29,46 +31,39 @@ p {
     color: darkred;
 }
 .logo {
-    display: block;
-    max-width: 30%;
+    width: 92px;
 }
-.photo {
-    max-width: 100%;
-}
-.main_aside {
-    max-width: 300px;
+.main_main_header {
+    grid-area: 1 / 1 / 2 / 2;
+    display: grid;
+    grid: 1fr / 1fr 3fr;
 }
 .main_body {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 4fr 1fr;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-.main_main {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 3fr;
-}
-.main_main_header {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 5fr;
+    grid: 100px 1fr 100px / 1fr;
 }
 .main_footer {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-area: 3 / 1 / 4 / 2;
+}
+/* Автомобили */
+.photo {
+    max-width: 100%;
+}
+.main_main {
+    display: flex;
+    flex-direction: column;
+}
+.flex_cont {
+    display: flex;
+}
+.grid_cont {
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 5fr;
+    grid: repeat(2, 1fr) / repeat(2 , 1fr);
 }
-.about {
-    grid-column-start: 1;
-    grid-column-end: 3;
+.capt {
+    font-size: 30px;
 }
+
 /* Стили для таблицы менделеева */
 .table_link {
     display: grid;
