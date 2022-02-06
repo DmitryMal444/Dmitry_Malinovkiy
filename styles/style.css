@@ -1,67 +1,223 @@
-/* Общая стилизация */
-body {
-    background-image: url(../images/background.jpg);
-    background-repeat: repeat-y;
-    background-size: 100%;
-    color: white;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-}
-header, footer {
-    border: 3px solid darkred;
-    background-image: url(../images/subbackground.jpg);
-}
-p {
-    font-size: 20px;
+*{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-/* Конец общая стилизация */
-.nav_link {
+a {
     text-decoration: none;
 }
-li {
+a:link {
+    color: black;
+}
+a:visited {
+    color: black;
+}
+ul {
     list-style-type: none;
 }
-.nav_link:link {
-    color: white;
+img {
+    display: block;
 }
-.nav_link:visited {
-    color: white;
-}
-.nav_link:hover {
-    color: darkred;
-}
-.logo {
-    width: 92px;
-}
-.main_main_header {
-    grid-area: 1 / 1 / 2 / 2;
+
+.body {
     display: grid;
-    grid: 1fr / 1fr 3fr;
+    grid: 100px 2fr 100px / 1fr;
+    gap: 10px;
 }
-.main_body {
+.main {
     display: grid;
-    grid: 100px 1fr 100px / 1fr;
+    grid: 1fr 1fr / 1fr;
+    gap: 10px;
 }
-.main_footer {
-    grid-area: 3 / 1 / 4 / 2;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-/* Автомобили */
+.header__logo {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+.header__img {
+    width: 60px;
+}
+.header__name {
+    font-size: 50px;
+}
+.menu {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+}
+.nav__link {
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.about {
+    display: grid;
+    grid: 1fr 4fr / repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+.about__header {
+    grid-area: 1 / 2 / 2 / 4;
+}
 .photo {
-    max-width: 100%;
+    grid-area: 1 / 1 / 3 / 2;
 }
-.main_main {
+.photo__img {
+    width: 100%;
+    object-fit: cover;
+}
+.about__course {
+    grid-area: 2 / 3 / 3 / 4;
+}
+.about__me {
+    grid-area: 2 / 2 / 3 / 3 ;
+}
+.about__me, .about__course, .about__header {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    background-color: aliceblue;
 }
-.flex_cont {
-    display: flex;
-}
-.grid_cont {
+
+.cars {
     display: grid;
-    grid: repeat(2, 1fr) / repeat(2 , 1fr);
+    grid: 1fr 1fr / 1fr;
+    gap: 10px;
 }
-.capt {
-    font-size: 30px;
+.line__img, .box__img {
+    width: 100%;
+}
+.line {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+.box {
+    border: 1px solid black;
+    display: grid;
+    grid: repeat(2, 1fr) / repeat(2, 1fr);
+}
+.box__img {
+    width: 52%;
+}
+.box__figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer {
+    height: 100px;
+    background-color: silver;
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        grid: 100px repeat(3, 1fr) / 1fr;
+    }
+    .about__header {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .photo {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .about__me {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .about__course {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    .line, .box {
+        display: grid;
+        grid: repeat(4, 1fr) / 1fr;
+    }
+    .line__img, .box__img {
+        width: 100%;
+    }
+}
+#menu__toggle {
+    opacity: 0;
+}
+@media screen and (max-width: 425px) {
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+        margin-left: 70%;
+    }
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: black;
+    }
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    .menu {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 50%;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+    }
+    .nav__link {
+        display: block;
+        padding: 12px 24px;
+        margin-top: 5px;
+        color: black;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    .nav__link:hover {
+        background-color: #CFD8DC;
+    }
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu {
+        visibility: visible;
+        left: 0;
+    }
 }
 
 /* Стили для таблицы менделеева */
