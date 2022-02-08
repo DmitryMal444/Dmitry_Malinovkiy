@@ -21,7 +21,7 @@
         <nav class="nav">
             <input id="menu__toggle" type="checkbox" />
             <label class="menu__btn" for="menu__toggle">
-                <span></span>
+                <span class="span"></span>
             </label>
             <ul class="menu">
                 <li class="nav__link"><a href="tableOfM.html" >Таблица</a></li>
@@ -86,7 +86,38 @@
         </article>
     </main>
     <footer class="footer">
-
+        <p>©Дмитрий</p>
     </footer>
+    <?php
+        $a = range(8, 19);
+        $b = getdate();
+        foreach ($a as $z){
+            if ($b['hours'] == $z) {
+                echo '<style>
+                        body{
+                            background-image: none;
+                            background-color: white;
+                            color: black;
+                            }
+                        .about__course, .about__header, .about__me, .photo, .line, .box{
+                            background-color: white;
+                            border: 1px solid black;
+                        </style>';
+            break;
+            }
+            else {
+                echo '<style>
+                        body{
+                            background-image: url(images/background.jpg);
+                            color: white;
+                            }
+                        .about__course, .about__header, .about__me, .photo, .line, .box{
+                            background-color: black;
+                            border: 1px solid darkred;
+                        }
+                      </style>';
+            }
+        }
+    ?>
 </body>
 </html>
