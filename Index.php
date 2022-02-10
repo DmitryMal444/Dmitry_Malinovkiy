@@ -1,34 +1,11 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="images/logo.png">
-    <title>SPHS</title>
-</head>
+<?php
+    $pagename = basename(__FILE__);
+    require('page-elements/all-head/all-head.php');
+?>
 <body class="body">
-    <header class="header">
-        <div class="header__logo">
-            <img src="images/logo.png" alt="не загрузилось" class="header__img">
-            <p class="header__name">SPHS</p>
-        </div>
-        <nav class="nav">
-            <input id="menu__toggle" type="checkbox" />
-            <label class="menu__btn" for="menu__toggle">
-                <span class="span"></span>
-            </label>
-            <ul class="menu">
-                <li class="nav__link"><a href="tableOfM.html" >Таблица</a></li>
-                <li class="nav__link"><a href="https://github.com/DmitryMal444/Dmitry_Malinovkiy" >ГитХаб</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php
+        require ('page-elements/all-header/all-header.php')
+    ?>
     <main class="main">
         <article class="about">
             <header class="about__header">
@@ -88,36 +65,6 @@
     <footer class="footer">
         <p>©Дмитрий</p>
     </footer>
-    <?php
-        $a = range(8, 19);
-        $b = getdate();
-        foreach ($a as $z){
-            if ($b['hours'] == $z) {
-                echo '<style>
-                        body{
-                            background-image: none;
-                            background-color: white;
-                            color: black;
-                            }
-                        .about__course, .about__header, .about__me, .photo, .line, .box{
-                            background-color: white;
-                            border: 1px solid black;
-                        </style>';
-            break;
-            }
-            else {
-                echo '<style>
-                        body{
-                            background-image: url(images/background.jpg);
-                            color: white;
-                            }
-                        .about__course, .about__header, .about__me, .photo, .line, .box{
-                            background-color: black;
-                            border: 1px solid darkred;
-                        }
-                      </style>';
-            }
-        }
-    ?>
+
 </body>
 </html>

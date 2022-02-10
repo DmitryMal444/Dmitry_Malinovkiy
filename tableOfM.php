@@ -1,17 +1,11 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
-    <title>Таблица Менделеева</title>
-</head>
+<?php
+$pagename = basename(__FILE__);
+require('page-elements/all-head/all-head.php');
+?>
 <body class="table_body">
+    <?php
+        require ('page-elements/all-header/all-header.php')
+    ?>
     <main class="main_table">
         <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B4" class="table_link pink">
             <p class="tb_el">H</p>

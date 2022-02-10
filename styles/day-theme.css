@@ -1,0 +1,30 @@
+body{
+    background-image: none;
+    background-color: white;
+    color: black;
+}
+.about__course, .about__header, .about__me, .photo, .line, .box {
+    background-color: white;
+    border: 1px solid black;
+}
+.nav__link{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+a {
+    color: black;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    color: black;
+}
+a:visited {
+    color: black;
+}
+.footer {
+    border: 1px solid black;
+    background-color: white;
+}

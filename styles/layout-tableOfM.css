@@ -1,0 +1,64 @@
+.table_link {
+    display: grid;
+    text-decoration: none;
+    border: 2px solid darkred;
+    grid: repeat(3, 1fr) / repeat(2, 1fr);
+}
+.table_link:link {
+    color: white;
+}
+.table_link:visited {
+    color: white;
+}
+.table_link:hover {
+    background-color: silver;
+    transform: scale(1.1);
+    transition: all 0.4s linear;
+}
+.main_table {
+    max-width: 100%;
+    display: grid;
+    grid: repeat(4, 1fr) / repeat(4, 1fr);
+    grid-gap: 1%;
+}
+.pink {
+    background-color: plum;
+}
+.yell {
+    background-color: khaki;
+}
+.blue {
+    background-color: cornflowerblue;
+}
+.tb_el {
+    font-size: 4em;
+    margin: 0;
+    grid-area: 1 / 1 / 3 / 2;
+}
+.tb_mass {
+    text-align: right;
+}
+.tb_name {
+    grid-area: 3 / 1 / 4 / 3;
+    font-size: 2em;
+}
+.tb_num {
+    text-align: right;
+}
+.null {
+    background-color: black;
+}
+.blue .tb_el {
+    grid-area: 1 / 2 / 3 / 3;
+    text-align: right;
+}
+.blue .tb_name {
+    text-align: right;
+}
+.blue .tb_num, .blue .tb_mass {
+    text-align: left;
+}
+.table_body {
+    display: grid;
+    grid: 100px 2fr / 1fr;
+}
