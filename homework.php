@@ -2,19 +2,19 @@
 $pagename = basename(__FILE__);
 require('page-elements/all-head/all-head.php');
 ?>
-<body>
+<body class="font-color">
     <?php
     require ('page-elements/all-header/all-header.php')
     ?>
-    <main>
-        <section>
+    <main class="box-border">
+        <section class="box-border box-background">
             <?php
                 for ($i = 5; $i <= 13 ; $i++){
                     echo '<p>'.$i.'</p>'.'<br>';
                 }
             ?>
         </section>
-        <section>
+        <section class="box-border box-background">
             <?php
                 $num = 1000;
                 $iter = 0;
@@ -27,7 +27,7 @@ require('page-elements/all-head/all-head.php');
                 echo '<p>Количество итераций: '.$iter.'</p>'.'<br>';
             ?>
         </section>
-        <section>
+        <section class="box-border box-background">
             <?php
                 $num2 = 1000;
                 $iterat = 0;
@@ -40,7 +40,7 @@ require('page-elements/all-head/all-head.php');
                 echo '<p>Количество итераций: '.$iterat.'</p>'.'<br>';
             ?>
         </section>
-        <section>
+        <section class="box-border box-background">
             <?php
                 $numbers=["0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10", "0, 1, 2, 3, 4, 5, 6, 7, 8, 9", "0, 1, 2, 3, 4, 5, 6, 7, 8", "0, 1, 2, 3, 4, 5, 6, 7", "0, 1, 2, 3, 4, 5, 6", "0, 1, 2, 3, 4, 5", "0, 1, 2, 3, 4", "0, 1, 2, 3", "0, 1, 2", "0, 1", "0"];
                 for ($iteration = 0; $iteration <= 10; $iteration++) {
