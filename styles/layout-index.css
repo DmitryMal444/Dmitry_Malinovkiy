@@ -36,7 +36,7 @@ img {
 .about__me {
     grid-area: 2 / 2 / 3 / 3 ;
 }
-.about__me, .about__course, .about__header {
+.about__header {
     display: flex;
     flex-direction: column;
 
@@ -54,12 +54,10 @@ img {
     width: 100%;
 }
 .line {
-    border: 1px solid black;
     display: flex;
     align-items: center;
 }
 .box {
-    border: 1px solid black;
     display: grid;
     grid: repeat(2, 1fr) / repeat(2, 1fr);
 }
@@ -98,4 +96,10 @@ img {
     .line__img, .box__img {
         width: 100%;
     }
+}
+.red {
+    color: red;
+}
+.blue {
+    color: blue;
 }
