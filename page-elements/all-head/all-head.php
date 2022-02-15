@@ -10,31 +10,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/logo.png">
     <?php
-    //    подключение тем
-    $a = range(8, 19);
-    $b = getdate();
-    foreach ($a as $z){
-        if ($b['hours'] == $z) {
-            echo '<link rel="stylesheet" href="styles/day-theme.css">';
-            break;
+    //  функция подключения тем
+        $tdt = getdate();
+        function theme_link($b)
+        {
+            $a = range(8, 19);
+            foreach ($a as $z) {
+                if ($b == $z) {
+                    echo '<link rel="stylesheet" href="styles/day-theme.css">';
+                    break;
+                } else {
+                    echo '<link rel="stylesheet" href="styles/nigh-theme.css">';
+                }
+            }
         }
-        else {
-            echo '<link rel="stylesheet" href="styles/nigh-theme.css">';
+    theme_link($tdt['hours']);
+    //   функция подключения разметки грид и флекс
+        function layout_link($pagename)
+        {
+            $styles = ['<link rel="stylesheet" href="page-elements/all-header/all-header__styles.css">', '<link rel="stylesheet" href="styles/layout-index.css">', '<link rel="stylesheet" href="styles/layout-tableOfM.css">', '<link rel="stylesheet" href="styles/layout-homework.css">'];
+            if ($pagename == "Index.php"){
+                echo $styles[0];
+                echo $styles[1];
+            }
+            elseif ($pagename == "tableOfM.php"){
+                echo $styles[0];
+                echo $styles[2];
+            }
+            elseif ($pagename == "homework.php"){
+                echo $styles[0];
+                echo $styles[3];
+            }
         }
-    }
-    //    подключение разметки грид и флекс
-        $styles = ['<link rel="stylesheet" href="page-elements/all-header/all-header__styles.css">', '<link rel="stylesheet" href="styles/layout-index.css">', '<link rel="stylesheet" href="styles/layout-tableOfM.css">', '<link rel="stylesheet" href="styles/layout-homework.css">'];
-        if ($pagename == "Index.php"){
-            echo $styles[0];
-            echo $styles[1];
-        }
-        elseif ($pagename == "tableOfM.php"){
-            echo $styles[0];
-            echo $styles[2];
-        }
-        elseif ($pagename == "homework.php"){
-            echo $styles[0];
-            echo $styles[3];
-        }
+        layout_link($pagename);
     ?>
     <title>SPHS</title>

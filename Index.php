@@ -9,13 +9,13 @@
     <main class="main">
         <article class="about">
             <header class="about__header">
-                <h2 class="about__name">Дмитрий Малиновский</h2>
+                <h2 class="about__name"><?php $words1 = "Дмитрий Малиновский"; echo $words1;?></h2>
             </header>
             <section class="photo">
                 <img src="images/photo.jpeg" alt="не загрузилось" class="photo__img">
             </section>
             <section class="about__me">
-                <h3 class="about__title">О себе</h3>
+                <h3 class="about__title"><?php $words2 = "О себе"; echo $words2; ?></h3>
                 <?php
                     $about_me = 'Родился и развивался в городе Магнитогорске. Закончил колледж по специальности
                     электромонтёр ОПС, сейчас работаю в этой же сфере. Хочу и стремлюсь стать разработчиком, но
@@ -28,7 +28,7 @@
                 ?>
             </section>
             <section class="about__course">
-                <h3 class="about__title">О курсе</h3>
+                <h3 class="about__title"><?php $words4 = "О курсе"; echo $words4;?></h3>
                 <?php
                     $about_course = 'Курс нравится, особенно тем подходом, что каждый может задать свой вопрос и
                     ему обязательно помогут.';
@@ -48,37 +48,37 @@
             <section class="line">
                 <figure class="line__figure">
                     <img src="images/alphard.png" alt="не загрузилось" class="line__img">
-                    <figcaption class="cars__capt">Toyota Alphard</figcaption>
+                    <figcaption class="cars__capt"><?php $words6 = "Toyota Alphard"; echo $words6;?></figcaption>
                 </figure>
                 <figure class="line__figure">
                     <img src="images/cruiser.png" alt="не загрузилось" class="line__img">
-                    <figcaption class="cars__capt">Toyota Land Cruiser</figcaption>
+                    <figcaption class="cars__capt"><?php $words7 = "Toyota Land Cruiser"; echo $words7;?></figcaption>
                 </figure>
                 <figure class="line__figure">
                     <img src="images/fortuner.png" alt="не загрузилось" class="line__img">
-                    <figcaption class="cars__capt">Toyota Fortune</figcaption>
+                    <figcaption class="cars__capt"><?php $words8 = "Toyota Fortune"; echo $words8;?></figcaption>
                 </figure>
                 <figure class="line__figure">
                     <img src="images/rav4.png" alt="не загрузилось" class="line__img">
-                    <figcaption class="cars__capt">Toyota Rav4</figcaption>
+                    <figcaption class="cars__capt"><?php $words9 = "Toyota Rav4"; echo $words9;?></figcaption>
                 </figure>
             </section>
             <section class="box">
                 <figure class="box__figure">
                     <img src="images/alphard.png" alt="не загрузилось" class="box__img">
-                    <figcaption class="cars__capt">Toyota Alphard</figcaption>
+                    <figcaption class="cars__capt"><?php $words10 = "Toyota Alphard"; echo $words10;?></figcaption>
                 </figure>
                 <figure class="box__figure">
                     <img src="images/cruiser.png" alt="не загрузилось" class="box__img">
-                    <figcaption class="cars__capt">Toyota Land Cruiser</figcaption>
+                    <figcaption class="cars__capt"><?php $words11 = "Toyota Land Cruiser"; echo $words11;?></figcaption>
                 </figure>
                 <figure class="box__figure">
                     <img src="images/fortuner.png" alt="не загрузилось" class="box__img">
-                    <figcaption class="cars__capt">Toyota Fortune</figcaption>
+                    <figcaption class="cars__capt"><?php $words12 = "Toyota Fortune"; echo $words12;?></figcaption>
                 </figure>
                 <figure class="box__figure">
                     <img src="images/rav4.png" alt="не загрузилось" class="box__img">
-                    <figcaption class="cars__capt">Toyota Rav4</figcaption>
+                    <figcaption class="cars__capt"><?php $words13 = "Toyota Rav4"; echo $words13;?></figcaption>
                 </figure>
             </section>
         </article>
