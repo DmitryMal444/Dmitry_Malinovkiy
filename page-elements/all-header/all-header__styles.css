@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-bo;
+    box-sizing: border-box;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 a {
@@ -36,9 +36,9 @@ ul {
     justify-content: center;
     align-items: center;
     padding: 5px;
-    margin-left: 50px;
+    margin-left: 5px;
     font-size: 20px;
-    min-width: 100px;
+    min-width: 60px;
     min-height: 35px;
 
 }

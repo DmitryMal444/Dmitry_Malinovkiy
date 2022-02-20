@@ -1,4 +1,9 @@
 <?php
+    session_start();
+    if(empty($_GET)){
+        $_GET = ['color'=>''];
+    }
+    setcookie('color', $_GET['color'], time()+120);
     $pagename = basename(__FILE__);
     require('page-elements/all-head/all-head.php');
 ?>

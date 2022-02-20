@@ -24,5 +24,15 @@
             $all_v = substr_count($v_words, $key) + $all_v;
         }
         echo $all_v." - всего гласных";
+        //Удаление сессии
+        if(isset($_POST)){
+            if (isset($_POST['p'])){
+                session_destroy();
+                $_POST = NULL;
+            }
+        }
     ?>
+    <form action="" method="post">
+        <button type="submit" name="p" value="p">Удалить сессию</button>
+    </form>
 </footer>
