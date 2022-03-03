@@ -1,31 +1,19 @@
 <?php
-//иммитация база данных
-$bd = ['log' => 'Pers', 'pas' => '123'];
-//Хеширование пароля
-$bd['pas'] = md5($bd['pas']);
-//Функция для проверки пары логин - пароль
-function log_in($bd):bool
-{
-    if ($bd['log'] == $_POST['log']) {
-        if ($bd['pas'] == md5($_POST['pas'])) {
-            return true;
-        }else{
-            return false;
-        }
+require_once 'auth.php';
+if (empty($_POST)){
+    $_POST = ['log' => '', 'pas' => ''];
+    echo 'Введите данные для входа';
+}else{
+    $log = $_POST['log'];
+    $pas = md5($_POST['pas']);
+    $user = new auth($log, $pas);
+    if ($user->login()){
+        echo 'Вы вошли';
     }else{
-        return false;
+        echo 'Неверный логин или пароль';
     }
 }
-//Действия при успешном\пустом\не верном входах
-if (log_in($bd)){
-    session_start();
-    header("Location: hello.php");
-    exit();
-}elseif (empty($_POST)){
-    echo 'Введите логин и пароль';
-}else{
-    echo 'Не верный логин или пароль';
-}
+// логин: admin пароль: 123
 ?>
 <!doctype html>
 <html lang="ru">
@@ -37,12 +25,12 @@ if (log_in($bd)){
     <title>Document</title>
 </head>
 <body>
-<form action="" method="post">
-    <input type="text" name="log">
-    <input type="password" name="pas">
-    <input type="submit"><br>
-    <a href="fact.php">Факт</a>
-    <a href="bitrix.php">Битрикс</a>
-</form>
+    <form action="" method="post">
+        <label for="log">Введите логин</label>
+        <input id="log" type="text" name="log"><br><br>
+        <label for="pas">Введите пароль</label>
+        <input id="pas" type="password" name="pas">
+        <input type="submit">
+    </form>
 </body>
 </html>
